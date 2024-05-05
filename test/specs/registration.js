@@ -181,5 +181,68 @@ describe("validate registration of admin - #TS_SES_0003", ()=>{
         await expect(await $(`.error`).getText()).toEqual("You Typed Wrong Password!");
         await browser.refresh();
     });
+
+    it("validate admin can not register with valid password and mismatched confirm  password - #TC_AR_0011", async ()=>{
+        await browser.url("http://localhost/project/student-php-enroolment/admin/register.php");
+        const uploadFile = path.resolve("./uploads/photo.jpg");
+
+        await $(`[name="name"]`).setValue("Bob Roe");
+        await $(`[name="email"]`).setValue("bob@g.c");
+        await $(`[name="username"]`).setValue("bob123456");
+        await $(`[name="password"]`).setValue("12345678");
+        await $(`[name="c_password"]`).setValue("123456789");
+        await $(`[name="photo"]`).setValue(uploadFile);
+
+        await $(`[name="register"]`).click();
+
+        await expect(await $(`.error`).getText()).toEqual("You Typed Wrong Password!");
+
+        await browser.refresh();
+    });
+
+    it("validate admin can not register with invalid file in photo selection - #TC_AR_0012", async ()=>{
+        await browser.url("http://localhost/project/student-php-enroolment/admin/register.php");
+        const uploadFile = path.resolve("./uploads/hello.bat");
+
+        await $(`[name="name"]`).setValue("Bob Roe");
+        await $(`[name="email"]`).setValue("bob@g.c");
+        await $(`[name="username"]`).setValue("bob123456");
+        await $(`[name="password"]`).setValue("12345678");
+        await $(`[name="c_password"]`).setValue("12345678");
+        await $(`[name="photo"]`).setValue(uploadFile);
+
+        await $(`[name="register"]`).click();
+
+        await expect(await $(`.error`).getText()).toEqual("Invalid photo!");
+
+        await browser.refresh();
+    });
+
+    it("validate admin can not register without selecting the photo - #TC_AR_0013", async ()=>{
+        await browser.url("http://localhost/project/student-php-enroolment/admin/register.php");
+        const uploadFile = path.resolve("");
+
+        await $(`[name="name"]`).setValue("Bob Roe");
+        await $(`[name="email"]`).setValue("bob@g.c");
+        await $(`[name="username"]`).setValue("bob123456");
+        await $(`[name="password"]`).setValue("12345678");
+        await $(`[name="c_password"]`).setValue("12345678");
+        await $(`[name="photo"]`).setValue(uploadFile);
+
+        await $(`[name="register"]`).click();
+
+        await expect(await $(`.error`).getText()).toEqual("The Photo is Required");
+
+        await browser.refresh();
+    });
+
+    it("validate admin can go Login page by clicking the Login button - #TC_AR_0014", async ()=>{
+        await browser.url("http://localhost/project/student-php-enroolment/admin/register.php");
+        await $('=Login').click();
+
+        await expect($('h1')).toHaveText("Login Users!");
+
+        await browser.refresh();
+    });
     
 });
