@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//label[text()=\"Password Is Required!\"]"
-}

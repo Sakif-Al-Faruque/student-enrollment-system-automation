@@ -1,3 +1,0 @@
-{
-  "url": "http://localhost/project/student-php-enroolment/admin/login.php"
-}

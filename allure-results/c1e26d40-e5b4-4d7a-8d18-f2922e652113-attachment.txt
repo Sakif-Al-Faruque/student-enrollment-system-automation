@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"partial link text\",\"selector\":\"\"Register\"\"}\n  (Session info: chrome=124.0.6367.119)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF73F7B1552+60802]\n\t(No symbol) [0x00007FF73F72AC52]\n\t(No symbol) [0x00007FF73F5E7CE4]\n\t(No symbol) [0x00007FF73F636D4D]\n\t(No symbol) [0x00007FF73F636E1C]\n\t(No symbol) [0x00007FF73F67CE37]\n\t(No symbol) [0x00007FF73F65ABBF]\n\t(No symbol) [0x00007FF73F67A224]\n\t(No symbol) [0x00007FF73F65A923]\n\t(No symbol) [0x00007FF73F628FEC]\n\t(No symbol) [0x00007FF73F629C21]\n\tGetHandleVerifier [0x00007FF73FAB41ED+3217949]\n\tGetHandleVerifier [0x00007FF73FAF6187+3488183]\n\tGetHandleVerifier [0x00007FF73FAEF10F+3459391]\n\tGetHandleVerifier [0x00007FF73F86B916+823622]\n\t(No symbol) [0x00007FF73F735FEF]\n\t(No symbol) [0x00007FF73F730F14]\n\t(No symbol) [0x00007FF73F7310A2]\n\t(No symbol) [0x00007FF73F7218F4]\n\tBaseThreadInitThunk [0x00007FFD534C7344+20]\n\tRtlUserThreadStart [0x00007FFD545026B1+33]\n"
-}

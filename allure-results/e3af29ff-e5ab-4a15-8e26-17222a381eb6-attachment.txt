@@ -1,3 +1,0 @@
-{
-  "text": "D:\\a1qa\\unit 2\\wd-project-05\\uploads\\photo.jpg"
-}
