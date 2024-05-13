@@ -220,18 +220,20 @@ describe("validate registration of admin - #TS_SES_0003", ()=>{
 
     it("validate admin can not register without selecting the photo - #TC_AR_0013", async ()=>{
         await browser.url("http://localhost/project/student-php-enroolment/admin/register.php");
-        const uploadFile = path.resolve("");
-
+        /* const uploadFile = path.resolve("");
+ */
         await $(`[name="name"]`).setValue("Bob Roe");
         await $(`[name="email"]`).setValue("bob@g.c");
         await $(`[name="username"]`).setValue("bob123456");
         await $(`[name="password"]`).setValue("12345678");
         await $(`[name="c_password"]`).setValue("12345678");
-        await $(`[name="photo"]`).setValue(uploadFile);
+        /* await $(`[name="photo"]`).setValue(uploadFile); */
 
         await $(`[name="register"]`).click();
 
-        await expect(await $(`.error`).getText()).toEqual("The Photo is Required");
+        
+        await expect(await $(`.error`).isExisting() ? await $(`.error`).getText() : "").toEqual("The Photo is Required");
+        
 
         await browser.refresh();
     });
