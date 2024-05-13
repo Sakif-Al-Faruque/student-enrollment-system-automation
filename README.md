@@ -13,6 +13,7 @@ A simple dummy website named [Studnet Enrollment System](https://code-projects.o
 * This automation test uses the fundamental features and concepts of Javascript UI Automation Framework WebdriverIO.
 * This reposity is still in updating process.
 * Only Chrome browser is used for executing  this test.
+* Allure report is generated and added to this repo.
 
 ## Here are some views of test documents,
 * Test Cases View
@@ -20,6 +21,9 @@ A simple dummy website named [Studnet Enrollment System](https://code-projects.o
 
 * Test Scenarios View
   ![Test Scenarios View](glimps/test_scenarios.JPG)
+  
+* Allure report overview
+  ![Allure report](glimps/allure_report.JPG)
 
 * Sample Automated test on registration page of the application
   [![Watch the video](glimps/Automation_Project_Demonstration.png)](https://www.youtube.com/watch?v=Y7ph78b-rMU) 
